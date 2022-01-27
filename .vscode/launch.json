@@ -1,0 +1,41 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch WSR Chrome against localhost",
+            "file": "${workspaceRoot}/index.html"
+          },
+        {
+            "type": "pwa-chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "url": "http://localhost:8100",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "type": "pwa-msedge",
+            "request": "launch",
+            "name": "Launch Edge against localhost",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "name": "Live Server",
+            "liveServer.settings.port": 5500,
+            "liveServer.settings.CustomBrowser" : "chrome",
+            "liveServer.settings.AdvanceCustomBrowserCmdLine": "chrome --incognito --remote-debugging-port=9222",
+            "liveServer.settings.NoBrowser" : false,
+            "liveServer.settings.ignoreFiles" : [
+                    ".vscode/**",
+                    "**/*.scss",
+                    "**/*.sass"
+            ]
+        
+        }
+    ]
+}

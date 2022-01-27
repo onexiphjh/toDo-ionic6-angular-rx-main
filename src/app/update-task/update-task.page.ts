@@ -37,7 +37,7 @@ export class UpdateTaskPage implements OnInit {
     console.log(this.categorySelectedCategory);
   }
 
-  async dismis(){
+  async dismiss(){
     await this.modalCtlr.dismiss()
   }
 
@@ -45,6 +45,6 @@ export class UpdateTaskPage implements OnInit {
     this.newTaskObj = ({itemName:this.itemName, itemDueDate:this.itemDueDate, itemPriority:this.itemPriority,itemCategory:this.categorySelectedCategory})
     let uid = this.task.key
     await this.todoServive.updateTask(uid,this.newTaskObj)
-    this.dismis()
+    this.dismiss()
   }
 }
